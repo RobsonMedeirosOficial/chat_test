@@ -57,8 +57,7 @@ public class SocketIO : MonoBehaviour
     {
         if (grid && msg)
         {
-           var m = Instantiate(msg, Vector3.zero, Quaternion.identity, grid);
-            m.text = txt;
+            msg.text = txt;
         }
     }
 }
