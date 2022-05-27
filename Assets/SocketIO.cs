@@ -20,7 +20,9 @@ public class SocketIO : MonoBehaviour
             //sioCom.Instance.Emit("CLIENT", "NOVA REQUISIÇÃO! (" + sioCom.Instance.SocketID + ")", true);
 
 
-            sioCom.Instance.On("SERVER", (data) =>
+
+            
+            sioCom.Instance.On("msgUpdate", (data) =>
             {
                 print("Received: " + data);
                 AddText(data);
